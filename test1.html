@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お試し2</title>
+    <link rel="stylesheet" type="text/css" href="css/test1_style.css" />
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div id="opening">
+        <div class="spotlight"></div>
+        <img src="img/6_1.png">
+    </div>
+    <!-- <div id="illust">
+        <img src="img/6_1.png">
+    </div> -->
+    <!-- <div id="star">
+        <img src="img/star.png">
+    </div> -->
+    <script>
+        $(document).mousemove(function (e) {
+            $('.spotlight').attr({
+                'style': 'background:radial-gradient(50px 50px at ' + e.clientX + 'px ' + e.clientY + 'px, transparent, transparent 100px, rgba(0,0,0,1) 150px)'
+            });
+        });
+    </script>
+</body>
+
+</html>
