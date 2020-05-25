@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+
+#opening {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+.spotlight {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /* height: 225%;
+    width: 120%;
+    background: radial-gradient(
+        circle farthest-side at center center,
+        transparent,
+        transparent,
+      black 150px
+    );
+    animation: test 10s forwards; */
+}
+@keyframes test {
+    0% {
+        bottom: -1000px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-200px);
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+#illust {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    height: 100%;
+    width: calc(100% - 50vw);
+}
+#illust img {
+    height: auto;
+    width: 50vw;
+}
+
+#star {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+#star img {
+    height: 100px;
+    margin: auto;
+}
