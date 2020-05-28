@@ -1,0 +1,243 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(black, rgb(40, 40, 70));
+}
+
+#opening {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    animation: op_up 5s ease 7s forwards;
+}
+@keyframes op_up {
+    50% {
+        filter: blur(10px);
+    }
+    100% {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+}
+.spotlight {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(100px 100px at 250px 250px, transparent, transparent 10px, rgba(0, 0, 0, 1) 200px);
+    animation: spotlight_anime 5s forwards;
+}
+@keyframes spotlight_anime {
+    0% {
+        background-position-y: 500px;
+    }
+    50% {
+        background-position-x: 600px;
+    }
+    100% {
+        background-position-y: 0px;
+    }
+}
+.op_illust {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: calc(100% - 60vw);
+}
+.op_illust img {
+    height: 100vh;
+    width: auto;
+}
+
+.op_bubble {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+.bubble_Item {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: white;
+    // box-shadow: 0px 0px 50px 0px rgb(255, 255, 255) inset;
+}
+@for $i from 0 through 60 {
+    $time: $i * 0.1;
+    $delay_time: 4;
+    $scale: $i * 0.15;
+
+    .bubble_shake#{$i * 1} {
+        animation: bubble_shake ($time + 2) + s infinite;
+    }
+    .bubble_move#{$i * 1} {
+        position: absolute;
+        bottom: -100%;
+        animation: bubble_move ($time + 2) + s linear ($delay_time) + s infinite;
+    }
+    .bubble_pos#{$i * 1} {
+        left: percentage($i * 2/100);
+    }
+    .bubble_scale#{$i * 1} {
+        transform: scale($scale);
+    }
+}
+@keyframes bubble_shake {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+@keyframes bubble_move {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
+#home {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+#illust {
+    position: fixed;
+    top: 0;
+    left: 25%;
+    width: calc(100% - 50vw);
+    transform: rotateZ(30deg);
+    animation: illust_rote 1s forwards;
+}
+@keyframes illust_rote {
+    100% {
+        transform: rotateZ(0);
+    }
+}
+.illust_action {
+    animation: illust_action 0.3s linear 2s forwards;
+}
+@keyframes illust_action {
+    40% {
+        transform: rotateZ(0);
+    }
+    60% {
+        transform: rotateZ(10deg);
+    }
+    80% {
+        transform: rotateZ(4.8deg);
+    }
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+.ball {
+    position: fixed;
+    top: -10px;
+    left: 57%;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: rgb(167, 226, 161);
+    animation: ball_action 1s ease 1.9s forwards;
+}
+@keyframes ball_action {
+    0% {
+    }
+    5% {
+        top: 50px;
+        transform: translateX(0);
+    }
+    10% {
+        top: 20px;
+        transform: translateX(100px);
+    }
+    20% {
+        top: 23px;
+        transform: translateX(200px);
+    }
+    100% {
+        top: 1000px;
+        transform: translateX(300px);
+    }
+}
+#illust img {
+    height: auto;
+    width: 50vw;
+    transform: scale(1.5);
+    animation: illust_scale 1s forwards;
+}
+@keyframes illust_scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+#decoration {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+.star {
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    animation: star_down 0.5s 1s forwards;
+}
+@keyframes star_down {
+    40% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-5%);
+    }
+    80% {
+        transform: translateY(-3%);
+    }
+    100% {
+        transform: translateY(-5%);
+    }
+}
+.star:nth-child(1) {
+    left: 20%;
+    height: 40%;
+}
+.star:nth-child(2) {
+    left: 70%;
+    height: 30%;
+}
+.star:nth-child(3) {
+    left: 80%;
+    height: 50%;
+}
+.star::before {
+    content: "";
+    display: block;
+    height: calc(100% - 50px);
+    width: 1px;
+    margin-left: calc(50% - 0.5px);
+    background-color: yellow;
+}
+.star::after {
+    content: "";
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin-top: -10px;
+    background-image: url("../img/star.png");
+    background-size: 100%;
+    animation: star_rote 10s linear infinite;
+}
+@keyframes star_rote {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
