@@ -1,57 +1,1691 @@
 body {
-    margin: 0;
+  height: 100vh;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#282846));
+  background: linear-gradient(black, #282846);
 }
 
 #opening {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  -webkit-animation: op_up 5s ease 7s forwards;
+          animation: op_up 5s ease 7s forwards;
 }
+
+@-webkit-keyframes op_up {
+  50% {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  100% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
+@keyframes op_up {
+  50% {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  100% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    opacity: 0;
+  }
+}
+
 .spotlight {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    /* height: 225%;
-    width: 120%;
-    background: radial-gradient(
-        circle farthest-side at center center,
-        transparent,
-        transparent,
-      black 150px
-    );
-    animation: test 10s forwards; */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(100px 100px at 250px 250px, transparent, transparent 10px, black 200px);
+  -webkit-animation: spotlight_anime 5s forwards;
+          animation: spotlight_anime 5s forwards;
 }
-@keyframes test {
-    0% {
-        bottom: -1000px;
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-200px);
-    }
-    100% {
-        bottom: 0px;
-    }
+
+@-webkit-keyframes spotlight_anime {
+  0% {
+    background-position-y: 500px;
+  }
+  50% {
+    background-position-x: 600px;
+  }
+  100% {
+    background-position-y: 0px;
+  }
+}
+
+@keyframes spotlight_anime {
+  0% {
+    background-position-y: 500px;
+  }
+  50% {
+    background-position-x: 600px;
+  }
+  100% {
+    background-position-y: 0px;
+  }
+}
+
+.op_illust {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: calc(100% - 60vw);
+}
+
+.op_illust img {
+  height: 100vh;
+  width: auto;
+}
+
+.op_bubble {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+
+.bubble_Item {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.bubble_shake0 {
+  -webkit-animation: bubble_shake 2s infinite;
+          animation: bubble_shake 2s infinite;
+}
+
+.bubble_move0 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2s linear 4s infinite;
+          animation: bubble_move 2s linear 4s infinite;
+}
+
+.bubble_pos0 {
+  left: 0%;
+}
+
+.bubble_scale0 {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.bubble_shake1 {
+  -webkit-animation: bubble_shake 2.1s infinite;
+          animation: bubble_shake 2.1s infinite;
+}
+
+.bubble_move1 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.1s linear 4s infinite;
+          animation: bubble_move 2.1s linear 4s infinite;
+}
+
+.bubble_pos1 {
+  left: 2%;
+}
+
+.bubble_scale1 {
+  -webkit-transform: scale(0.15);
+          transform: scale(0.15);
+}
+
+.bubble_shake2 {
+  -webkit-animation: bubble_shake 2.2s infinite;
+          animation: bubble_shake 2.2s infinite;
+}
+
+.bubble_move2 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.2s linear 4s infinite;
+          animation: bubble_move 2.2s linear 4s infinite;
+}
+
+.bubble_pos2 {
+  left: 4%;
+}
+
+.bubble_scale2 {
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+}
+
+.bubble_shake3 {
+  -webkit-animation: bubble_shake 2.3s infinite;
+          animation: bubble_shake 2.3s infinite;
+}
+
+.bubble_move3 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.3s linear 4s infinite;
+          animation: bubble_move 2.3s linear 4s infinite;
+}
+
+.bubble_pos3 {
+  left: 6%;
+}
+
+.bubble_scale3 {
+  -webkit-transform: scale(0.45);
+          transform: scale(0.45);
+}
+
+.bubble_shake4 {
+  -webkit-animation: bubble_shake 2.4s infinite;
+          animation: bubble_shake 2.4s infinite;
+}
+
+.bubble_move4 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.4s linear 4s infinite;
+          animation: bubble_move 2.4s linear 4s infinite;
+}
+
+.bubble_pos4 {
+  left: 8%;
+}
+
+.bubble_scale4 {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.bubble_shake5 {
+  -webkit-animation: bubble_shake 2.5s infinite;
+          animation: bubble_shake 2.5s infinite;
+}
+
+.bubble_move5 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.5s linear 4s infinite;
+          animation: bubble_move 2.5s linear 4s infinite;
+}
+
+.bubble_pos5 {
+  left: 10%;
+}
+
+.bubble_scale5 {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+}
+
+.bubble_shake6 {
+  -webkit-animation: bubble_shake 2.6s infinite;
+          animation: bubble_shake 2.6s infinite;
+}
+
+.bubble_move6 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.6s linear 4s infinite;
+          animation: bubble_move 2.6s linear 4s infinite;
+}
+
+.bubble_pos6 {
+  left: 12%;
+}
+
+.bubble_scale6 {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.bubble_shake7 {
+  -webkit-animation: bubble_shake 2.7s infinite;
+          animation: bubble_shake 2.7s infinite;
+}
+
+.bubble_move7 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.7s linear 4s infinite;
+          animation: bubble_move 2.7s linear 4s infinite;
+}
+
+.bubble_pos7 {
+  left: 14%;
+}
+
+.bubble_scale7 {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.bubble_shake8 {
+  -webkit-animation: bubble_shake 2.8s infinite;
+          animation: bubble_shake 2.8s infinite;
+}
+
+.bubble_move8 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.8s linear 4s infinite;
+          animation: bubble_move 2.8s linear 4s infinite;
+}
+
+.bubble_pos8 {
+  left: 16%;
+}
+
+.bubble_scale8 {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.bubble_shake9 {
+  -webkit-animation: bubble_shake 2.9s infinite;
+          animation: bubble_shake 2.9s infinite;
+}
+
+.bubble_move9 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 2.9s linear 4s infinite;
+          animation: bubble_move 2.9s linear 4s infinite;
+}
+
+.bubble_pos9 {
+  left: 18%;
+}
+
+.bubble_scale9 {
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
+}
+
+.bubble_shake10 {
+  -webkit-animation: bubble_shake 3s infinite;
+          animation: bubble_shake 3s infinite;
+}
+
+.bubble_move10 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3s linear 4s infinite;
+          animation: bubble_move 3s linear 4s infinite;
+}
+
+.bubble_pos10 {
+  left: 20%;
+}
+
+.bubble_scale10 {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.bubble_shake11 {
+  -webkit-animation: bubble_shake 3.1s infinite;
+          animation: bubble_shake 3.1s infinite;
+}
+
+.bubble_move11 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.1s linear 4s infinite;
+          animation: bubble_move 3.1s linear 4s infinite;
+}
+
+.bubble_pos11 {
+  left: 22%;
+}
+
+.bubble_scale11 {
+  -webkit-transform: scale(1.65);
+          transform: scale(1.65);
+}
+
+.bubble_shake12 {
+  -webkit-animation: bubble_shake 3.2s infinite;
+          animation: bubble_shake 3.2s infinite;
+}
+
+.bubble_move12 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.2s linear 4s infinite;
+          animation: bubble_move 3.2s linear 4s infinite;
+}
+
+.bubble_pos12 {
+  left: 24%;
+}
+
+.bubble_scale12 {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+}
+
+.bubble_shake13 {
+  -webkit-animation: bubble_shake 3.3s infinite;
+          animation: bubble_shake 3.3s infinite;
+}
+
+.bubble_move13 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.3s linear 4s infinite;
+          animation: bubble_move 3.3s linear 4s infinite;
+}
+
+.bubble_pos13 {
+  left: 26%;
+}
+
+.bubble_scale13 {
+  -webkit-transform: scale(1.95);
+          transform: scale(1.95);
+}
+
+.bubble_shake14 {
+  -webkit-animation: bubble_shake 3.4s infinite;
+          animation: bubble_shake 3.4s infinite;
+}
+
+.bubble_move14 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.4s linear 4s infinite;
+          animation: bubble_move 3.4s linear 4s infinite;
+}
+
+.bubble_pos14 {
+  left: 28%;
+}
+
+.bubble_scale14 {
+  -webkit-transform: scale(2.1);
+          transform: scale(2.1);
+}
+
+.bubble_shake15 {
+  -webkit-animation: bubble_shake 3.5s infinite;
+          animation: bubble_shake 3.5s infinite;
+}
+
+.bubble_move15 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.5s linear 4s infinite;
+          animation: bubble_move 3.5s linear 4s infinite;
+}
+
+.bubble_pos15 {
+  left: 30%;
+}
+
+.bubble_scale15 {
+  -webkit-transform: scale(2.25);
+          transform: scale(2.25);
+}
+
+.bubble_shake16 {
+  -webkit-animation: bubble_shake 3.6s infinite;
+          animation: bubble_shake 3.6s infinite;
+}
+
+.bubble_move16 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.6s linear 4s infinite;
+          animation: bubble_move 3.6s linear 4s infinite;
+}
+
+.bubble_pos16 {
+  left: 32%;
+}
+
+.bubble_scale16 {
+  -webkit-transform: scale(2.4);
+          transform: scale(2.4);
+}
+
+.bubble_shake17 {
+  -webkit-animation: bubble_shake 3.7s infinite;
+          animation: bubble_shake 3.7s infinite;
+}
+
+.bubble_move17 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.7s linear 4s infinite;
+          animation: bubble_move 3.7s linear 4s infinite;
+}
+
+.bubble_pos17 {
+  left: 34%;
+}
+
+.bubble_scale17 {
+  -webkit-transform: scale(2.55);
+          transform: scale(2.55);
+}
+
+.bubble_shake18 {
+  -webkit-animation: bubble_shake 3.8s infinite;
+          animation: bubble_shake 3.8s infinite;
+}
+
+.bubble_move18 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.8s linear 4s infinite;
+          animation: bubble_move 3.8s linear 4s infinite;
+}
+
+.bubble_pos18 {
+  left: 36%;
+}
+
+.bubble_scale18 {
+  -webkit-transform: scale(2.7);
+          transform: scale(2.7);
+}
+
+.bubble_shake19 {
+  -webkit-animation: bubble_shake 3.9s infinite;
+          animation: bubble_shake 3.9s infinite;
+}
+
+.bubble_move19 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 3.9s linear 4s infinite;
+          animation: bubble_move 3.9s linear 4s infinite;
+}
+
+.bubble_pos19 {
+  left: 38%;
+}
+
+.bubble_scale19 {
+  -webkit-transform: scale(2.85);
+          transform: scale(2.85);
+}
+
+.bubble_shake20 {
+  -webkit-animation: bubble_shake 4s infinite;
+          animation: bubble_shake 4s infinite;
+}
+
+.bubble_move20 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4s linear 4s infinite;
+          animation: bubble_move 4s linear 4s infinite;
+}
+
+.bubble_pos20 {
+  left: 40%;
+}
+
+.bubble_scale20 {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.bubble_shake21 {
+  -webkit-animation: bubble_shake 4.1s infinite;
+          animation: bubble_shake 4.1s infinite;
+}
+
+.bubble_move21 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.1s linear 4s infinite;
+          animation: bubble_move 4.1s linear 4s infinite;
+}
+
+.bubble_pos21 {
+  left: 42%;
+}
+
+.bubble_scale21 {
+  -webkit-transform: scale(3.15);
+          transform: scale(3.15);
+}
+
+.bubble_shake22 {
+  -webkit-animation: bubble_shake 4.2s infinite;
+          animation: bubble_shake 4.2s infinite;
+}
+
+.bubble_move22 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.2s linear 4s infinite;
+          animation: bubble_move 4.2s linear 4s infinite;
+}
+
+.bubble_pos22 {
+  left: 44%;
+}
+
+.bubble_scale22 {
+  -webkit-transform: scale(3.3);
+          transform: scale(3.3);
+}
+
+.bubble_shake23 {
+  -webkit-animation: bubble_shake 4.3s infinite;
+          animation: bubble_shake 4.3s infinite;
+}
+
+.bubble_move23 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.3s linear 4s infinite;
+          animation: bubble_move 4.3s linear 4s infinite;
+}
+
+.bubble_pos23 {
+  left: 46%;
+}
+
+.bubble_scale23 {
+  -webkit-transform: scale(3.45);
+          transform: scale(3.45);
+}
+
+.bubble_shake24 {
+  -webkit-animation: bubble_shake 4.4s infinite;
+          animation: bubble_shake 4.4s infinite;
+}
+
+.bubble_move24 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.4s linear 4s infinite;
+          animation: bubble_move 4.4s linear 4s infinite;
+}
+
+.bubble_pos24 {
+  left: 48%;
+}
+
+.bubble_scale24 {
+  -webkit-transform: scale(3.6);
+          transform: scale(3.6);
+}
+
+.bubble_shake25 {
+  -webkit-animation: bubble_shake 4.5s infinite;
+          animation: bubble_shake 4.5s infinite;
+}
+
+.bubble_move25 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.5s linear 4s infinite;
+          animation: bubble_move 4.5s linear 4s infinite;
+}
+
+.bubble_pos25 {
+  left: 50%;
+}
+
+.bubble_scale25 {
+  -webkit-transform: scale(3.75);
+          transform: scale(3.75);
+}
+
+.bubble_shake26 {
+  -webkit-animation: bubble_shake 4.6s infinite;
+          animation: bubble_shake 4.6s infinite;
+}
+
+.bubble_move26 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.6s linear 4s infinite;
+          animation: bubble_move 4.6s linear 4s infinite;
+}
+
+.bubble_pos26 {
+  left: 52%;
+}
+
+.bubble_scale26 {
+  -webkit-transform: scale(3.9);
+          transform: scale(3.9);
+}
+
+.bubble_shake27 {
+  -webkit-animation: bubble_shake 4.7s infinite;
+          animation: bubble_shake 4.7s infinite;
+}
+
+.bubble_move27 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.7s linear 4s infinite;
+          animation: bubble_move 4.7s linear 4s infinite;
+}
+
+.bubble_pos27 {
+  left: 54%;
+}
+
+.bubble_scale27 {
+  -webkit-transform: scale(4.05);
+          transform: scale(4.05);
+}
+
+.bubble_shake28 {
+  -webkit-animation: bubble_shake 4.8s infinite;
+          animation: bubble_shake 4.8s infinite;
+}
+
+.bubble_move28 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.8s linear 4s infinite;
+          animation: bubble_move 4.8s linear 4s infinite;
+}
+
+.bubble_pos28 {
+  left: 56%;
+}
+
+.bubble_scale28 {
+  -webkit-transform: scale(4.2);
+          transform: scale(4.2);
+}
+
+.bubble_shake29 {
+  -webkit-animation: bubble_shake 4.9s infinite;
+          animation: bubble_shake 4.9s infinite;
+}
+
+.bubble_move29 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 4.9s linear 4s infinite;
+          animation: bubble_move 4.9s linear 4s infinite;
+}
+
+.bubble_pos29 {
+  left: 58%;
+}
+
+.bubble_scale29 {
+  -webkit-transform: scale(4.35);
+          transform: scale(4.35);
+}
+
+.bubble_shake30 {
+  -webkit-animation: bubble_shake 5s infinite;
+          animation: bubble_shake 5s infinite;
+}
+
+.bubble_move30 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5s linear 4s infinite;
+          animation: bubble_move 5s linear 4s infinite;
+}
+
+.bubble_pos30 {
+  left: 60%;
+}
+
+.bubble_scale30 {
+  -webkit-transform: scale(4.5);
+          transform: scale(4.5);
+}
+
+.bubble_shake31 {
+  -webkit-animation: bubble_shake 5.1s infinite;
+          animation: bubble_shake 5.1s infinite;
+}
+
+.bubble_move31 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.1s linear 4s infinite;
+          animation: bubble_move 5.1s linear 4s infinite;
+}
+
+.bubble_pos31 {
+  left: 62%;
+}
+
+.bubble_scale31 {
+  -webkit-transform: scale(4.65);
+          transform: scale(4.65);
+}
+
+.bubble_shake32 {
+  -webkit-animation: bubble_shake 5.2s infinite;
+          animation: bubble_shake 5.2s infinite;
+}
+
+.bubble_move32 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.2s linear 4s infinite;
+          animation: bubble_move 5.2s linear 4s infinite;
+}
+
+.bubble_pos32 {
+  left: 64%;
+}
+
+.bubble_scale32 {
+  -webkit-transform: scale(4.8);
+          transform: scale(4.8);
+}
+
+.bubble_shake33 {
+  -webkit-animation: bubble_shake 5.3s infinite;
+          animation: bubble_shake 5.3s infinite;
+}
+
+.bubble_move33 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.3s linear 4s infinite;
+          animation: bubble_move 5.3s linear 4s infinite;
+}
+
+.bubble_pos33 {
+  left: 66%;
+}
+
+.bubble_scale33 {
+  -webkit-transform: scale(4.95);
+          transform: scale(4.95);
+}
+
+.bubble_shake34 {
+  -webkit-animation: bubble_shake 5.4s infinite;
+          animation: bubble_shake 5.4s infinite;
+}
+
+.bubble_move34 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.4s linear 4s infinite;
+          animation: bubble_move 5.4s linear 4s infinite;
+}
+
+.bubble_pos34 {
+  left: 68%;
+}
+
+.bubble_scale34 {
+  -webkit-transform: scale(5.1);
+          transform: scale(5.1);
+}
+
+.bubble_shake35 {
+  -webkit-animation: bubble_shake 5.5s infinite;
+          animation: bubble_shake 5.5s infinite;
+}
+
+.bubble_move35 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.5s linear 4s infinite;
+          animation: bubble_move 5.5s linear 4s infinite;
+}
+
+.bubble_pos35 {
+  left: 70%;
+}
+
+.bubble_scale35 {
+  -webkit-transform: scale(5.25);
+          transform: scale(5.25);
+}
+
+.bubble_shake36 {
+  -webkit-animation: bubble_shake 5.6s infinite;
+          animation: bubble_shake 5.6s infinite;
+}
+
+.bubble_move36 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.6s linear 4s infinite;
+          animation: bubble_move 5.6s linear 4s infinite;
+}
+
+.bubble_pos36 {
+  left: 72%;
+}
+
+.bubble_scale36 {
+  -webkit-transform: scale(5.4);
+          transform: scale(5.4);
+}
+
+.bubble_shake37 {
+  -webkit-animation: bubble_shake 5.7s infinite;
+          animation: bubble_shake 5.7s infinite;
+}
+
+.bubble_move37 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.7s linear 4s infinite;
+          animation: bubble_move 5.7s linear 4s infinite;
+}
+
+.bubble_pos37 {
+  left: 74%;
+}
+
+.bubble_scale37 {
+  -webkit-transform: scale(5.55);
+          transform: scale(5.55);
+}
+
+.bubble_shake38 {
+  -webkit-animation: bubble_shake 5.8s infinite;
+          animation: bubble_shake 5.8s infinite;
+}
+
+.bubble_move38 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.8s linear 4s infinite;
+          animation: bubble_move 5.8s linear 4s infinite;
+}
+
+.bubble_pos38 {
+  left: 76%;
+}
+
+.bubble_scale38 {
+  -webkit-transform: scale(5.7);
+          transform: scale(5.7);
+}
+
+.bubble_shake39 {
+  -webkit-animation: bubble_shake 5.9s infinite;
+          animation: bubble_shake 5.9s infinite;
+}
+
+.bubble_move39 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 5.9s linear 4s infinite;
+          animation: bubble_move 5.9s linear 4s infinite;
+}
+
+.bubble_pos39 {
+  left: 78%;
+}
+
+.bubble_scale39 {
+  -webkit-transform: scale(5.85);
+          transform: scale(5.85);
+}
+
+.bubble_shake40 {
+  -webkit-animation: bubble_shake 6s infinite;
+          animation: bubble_shake 6s infinite;
+}
+
+.bubble_move40 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6s linear 4s infinite;
+          animation: bubble_move 6s linear 4s infinite;
+}
+
+.bubble_pos40 {
+  left: 80%;
+}
+
+.bubble_scale40 {
+  -webkit-transform: scale(6);
+          transform: scale(6);
+}
+
+.bubble_shake41 {
+  -webkit-animation: bubble_shake 6.1s infinite;
+          animation: bubble_shake 6.1s infinite;
+}
+
+.bubble_move41 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.1s linear 4s infinite;
+          animation: bubble_move 6.1s linear 4s infinite;
+}
+
+.bubble_pos41 {
+  left: 82%;
+}
+
+.bubble_scale41 {
+  -webkit-transform: scale(6.15);
+          transform: scale(6.15);
+}
+
+.bubble_shake42 {
+  -webkit-animation: bubble_shake 6.2s infinite;
+          animation: bubble_shake 6.2s infinite;
+}
+
+.bubble_move42 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.2s linear 4s infinite;
+          animation: bubble_move 6.2s linear 4s infinite;
+}
+
+.bubble_pos42 {
+  left: 84%;
+}
+
+.bubble_scale42 {
+  -webkit-transform: scale(6.3);
+          transform: scale(6.3);
+}
+
+.bubble_shake43 {
+  -webkit-animation: bubble_shake 6.3s infinite;
+          animation: bubble_shake 6.3s infinite;
+}
+
+.bubble_move43 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.3s linear 4s infinite;
+          animation: bubble_move 6.3s linear 4s infinite;
+}
+
+.bubble_pos43 {
+  left: 86%;
+}
+
+.bubble_scale43 {
+  -webkit-transform: scale(6.45);
+          transform: scale(6.45);
+}
+
+.bubble_shake44 {
+  -webkit-animation: bubble_shake 6.4s infinite;
+          animation: bubble_shake 6.4s infinite;
+}
+
+.bubble_move44 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.4s linear 4s infinite;
+          animation: bubble_move 6.4s linear 4s infinite;
+}
+
+.bubble_pos44 {
+  left: 88%;
+}
+
+.bubble_scale44 {
+  -webkit-transform: scale(6.6);
+          transform: scale(6.6);
+}
+
+.bubble_shake45 {
+  -webkit-animation: bubble_shake 6.5s infinite;
+          animation: bubble_shake 6.5s infinite;
+}
+
+.bubble_move45 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.5s linear 4s infinite;
+          animation: bubble_move 6.5s linear 4s infinite;
+}
+
+.bubble_pos45 {
+  left: 90%;
+}
+
+.bubble_scale45 {
+  -webkit-transform: scale(6.75);
+          transform: scale(6.75);
+}
+
+.bubble_shake46 {
+  -webkit-animation: bubble_shake 6.6s infinite;
+          animation: bubble_shake 6.6s infinite;
+}
+
+.bubble_move46 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.6s linear 4s infinite;
+          animation: bubble_move 6.6s linear 4s infinite;
+}
+
+.bubble_pos46 {
+  left: 92%;
+}
+
+.bubble_scale46 {
+  -webkit-transform: scale(6.9);
+          transform: scale(6.9);
+}
+
+.bubble_shake47 {
+  -webkit-animation: bubble_shake 6.7s infinite;
+          animation: bubble_shake 6.7s infinite;
+}
+
+.bubble_move47 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.7s linear 4s infinite;
+          animation: bubble_move 6.7s linear 4s infinite;
+}
+
+.bubble_pos47 {
+  left: 94%;
+}
+
+.bubble_scale47 {
+  -webkit-transform: scale(7.05);
+          transform: scale(7.05);
+}
+
+.bubble_shake48 {
+  -webkit-animation: bubble_shake 6.8s infinite;
+          animation: bubble_shake 6.8s infinite;
+}
+
+.bubble_move48 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.8s linear 4s infinite;
+          animation: bubble_move 6.8s linear 4s infinite;
+}
+
+.bubble_pos48 {
+  left: 96%;
+}
+
+.bubble_scale48 {
+  -webkit-transform: scale(7.2);
+          transform: scale(7.2);
+}
+
+.bubble_shake49 {
+  -webkit-animation: bubble_shake 6.9s infinite;
+          animation: bubble_shake 6.9s infinite;
+}
+
+.bubble_move49 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 6.9s linear 4s infinite;
+          animation: bubble_move 6.9s linear 4s infinite;
+}
+
+.bubble_pos49 {
+  left: 98%;
+}
+
+.bubble_scale49 {
+  -webkit-transform: scale(7.35);
+          transform: scale(7.35);
+}
+
+.bubble_shake50 {
+  -webkit-animation: bubble_shake 7s infinite;
+          animation: bubble_shake 7s infinite;
+}
+
+.bubble_move50 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7s linear 4s infinite;
+          animation: bubble_move 7s linear 4s infinite;
+}
+
+.bubble_pos50 {
+  left: 100%;
+}
+
+.bubble_scale50 {
+  -webkit-transform: scale(7.5);
+          transform: scale(7.5);
+}
+
+.bubble_shake51 {
+  -webkit-animation: bubble_shake 7.1s infinite;
+          animation: bubble_shake 7.1s infinite;
+}
+
+.bubble_move51 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.1s linear 4s infinite;
+          animation: bubble_move 7.1s linear 4s infinite;
+}
+
+.bubble_pos51 {
+  left: 102%;
+}
+
+.bubble_scale51 {
+  -webkit-transform: scale(7.65);
+          transform: scale(7.65);
+}
+
+.bubble_shake52 {
+  -webkit-animation: bubble_shake 7.2s infinite;
+          animation: bubble_shake 7.2s infinite;
+}
+
+.bubble_move52 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.2s linear 4s infinite;
+          animation: bubble_move 7.2s linear 4s infinite;
+}
+
+.bubble_pos52 {
+  left: 104%;
+}
+
+.bubble_scale52 {
+  -webkit-transform: scale(7.8);
+          transform: scale(7.8);
+}
+
+.bubble_shake53 {
+  -webkit-animation: bubble_shake 7.3s infinite;
+          animation: bubble_shake 7.3s infinite;
+}
+
+.bubble_move53 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.3s linear 4s infinite;
+          animation: bubble_move 7.3s linear 4s infinite;
+}
+
+.bubble_pos53 {
+  left: 106%;
+}
+
+.bubble_scale53 {
+  -webkit-transform: scale(7.95);
+          transform: scale(7.95);
+}
+
+.bubble_shake54 {
+  -webkit-animation: bubble_shake 7.4s infinite;
+          animation: bubble_shake 7.4s infinite;
+}
+
+.bubble_move54 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.4s linear 4s infinite;
+          animation: bubble_move 7.4s linear 4s infinite;
+}
+
+.bubble_pos54 {
+  left: 108%;
+}
+
+.bubble_scale54 {
+  -webkit-transform: scale(8.1);
+          transform: scale(8.1);
+}
+
+.bubble_shake55 {
+  -webkit-animation: bubble_shake 7.5s infinite;
+          animation: bubble_shake 7.5s infinite;
+}
+
+.bubble_move55 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.5s linear 4s infinite;
+          animation: bubble_move 7.5s linear 4s infinite;
+}
+
+.bubble_pos55 {
+  left: 110%;
+}
+
+.bubble_scale55 {
+  -webkit-transform: scale(8.25);
+          transform: scale(8.25);
+}
+
+.bubble_shake56 {
+  -webkit-animation: bubble_shake 7.6s infinite;
+          animation: bubble_shake 7.6s infinite;
+}
+
+.bubble_move56 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.6s linear 4s infinite;
+          animation: bubble_move 7.6s linear 4s infinite;
+}
+
+.bubble_pos56 {
+  left: 112%;
+}
+
+.bubble_scale56 {
+  -webkit-transform: scale(8.4);
+          transform: scale(8.4);
+}
+
+.bubble_shake57 {
+  -webkit-animation: bubble_shake 7.7s infinite;
+          animation: bubble_shake 7.7s infinite;
+}
+
+.bubble_move57 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.7s linear 4s infinite;
+          animation: bubble_move 7.7s linear 4s infinite;
+}
+
+.bubble_pos57 {
+  left: 114%;
+}
+
+.bubble_scale57 {
+  -webkit-transform: scale(8.55);
+          transform: scale(8.55);
+}
+
+.bubble_shake58 {
+  -webkit-animation: bubble_shake 7.8s infinite;
+          animation: bubble_shake 7.8s infinite;
+}
+
+.bubble_move58 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.8s linear 4s infinite;
+          animation: bubble_move 7.8s linear 4s infinite;
+}
+
+.bubble_pos58 {
+  left: 116%;
+}
+
+.bubble_scale58 {
+  -webkit-transform: scale(8.7);
+          transform: scale(8.7);
+}
+
+.bubble_shake59 {
+  -webkit-animation: bubble_shake 7.9s infinite;
+          animation: bubble_shake 7.9s infinite;
+}
+
+.bubble_move59 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 7.9s linear 4s infinite;
+          animation: bubble_move 7.9s linear 4s infinite;
+}
+
+.bubble_pos59 {
+  left: 118%;
+}
+
+.bubble_scale59 {
+  -webkit-transform: scale(8.85);
+          transform: scale(8.85);
+}
+
+.bubble_shake60 {
+  -webkit-animation: bubble_shake 8s infinite;
+          animation: bubble_shake 8s infinite;
+}
+
+.bubble_move60 {
+  position: absolute;
+  bottom: -100%;
+  -webkit-animation: bubble_move 8s linear 4s infinite;
+          animation: bubble_move 8s linear 4s infinite;
+}
+
+.bubble_pos60 {
+  left: 120%;
+}
+
+.bubble_scale60 {
+  -webkit-transform: scale(9);
+          transform: scale(9);
+}
+
+@-webkit-keyframes bubble_shake {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes bubble_shake {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes bubble_move {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes bubble_move {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+#home {
+  display: none;
+  height: 100vh;
+  width: 100vw;
 }
 
 #illust {
-    position: fixed;
-    top: 0;
-    left: 25%;
-    height: 100%;
-    width: calc(100% - 50vw);
-}
-#illust img {
-    height: auto;
-    width: 50vw;
+  position: fixed;
+  top: 0;
+  left: 25%;
+  width: calc(100% - 50vw);
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+  -webkit-animation: illust_rote 1s forwards;
+          animation: illust_rote 1s forwards;
 }
 
-#star {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
+@-webkit-keyframes illust_rote {
+  100% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
 }
-#star img {
-    height: 100px;
-    margin: auto;
+
+@keyframes illust_rote {
+  100% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
 }
+
+.illust_action {
+  -webkit-animation: illust_action 0.3s linear 2s forwards;
+          animation: illust_action 0.3s linear 2s forwards;
+}
+
+@-webkit-keyframes illust_action {
+  40% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  60% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  80% {
+    -webkit-transform: rotateZ(4.8deg);
+            transform: rotateZ(4.8deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+}
+
+@keyframes illust_action {
+  40% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  60% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+  80% {
+    -webkit-transform: rotateZ(4.8deg);
+            transform: rotateZ(4.8deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+  }
+}
+
+.ball {
+  position: fixed;
+  top: -10px;
+  left: 57%;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background-color: #a7e2a1;
+  -webkit-animation: ball_action 1s ease 1.9s forwards;
+          animation: ball_action 1s ease 1.9s forwards;
+}
+
+@-webkit-keyframes ball_action {
+  0% {
+  }
+  5% {
+    top: 50px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    top: 20px;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  20% {
+    top: 23px;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  100% {
+    top: 1000px;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+
+@keyframes ball_action {
+  0% {
+  }
+  5% {
+    top: 50px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10% {
+    top: 20px;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  20% {
+    top: 23px;
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  100% {
+    top: 1000px;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+
+#illust img {
+  height: auto;
+  width: 50vw;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-animation: illust_scale 1s forwards;
+          animation: illust_scale 1s forwards;
+}
+
+@-webkit-keyframes illust_scale {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes illust_scale {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#decoration {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.star {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation: star_down 0.5s 1s forwards;
+          animation: star_down 0.5s 1s forwards;
+}
+
+@-webkit-keyframes star_down {
+  40% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  80% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+
+@keyframes star_down {
+  40% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  60% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  80% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+
+.star:nth-child(1) {
+  left: 20%;
+  height: 40%;
+}
+
+.star:nth-child(2) {
+  left: 70%;
+  height: 30%;
+}
+
+.star:nth-child(3) {
+  left: 80%;
+  height: 50%;
+}
+
+.star::before {
+  content: "";
+  display: block;
+  height: calc(100% - 50px);
+  width: 1px;
+  margin-left: calc(50% - 0.5px);
+  background-color: yellow;
+}
+
+.star::after {
+  content: "";
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin-top: -10px;
+  background-image: url("../img/star.png");
+  background-size: 100%;
+  -webkit-animation: star_rote 10s linear infinite;
+          animation: star_rote 10s linear infinite;
+}
+
+@-webkit-keyframes star_rote {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes star_rote {
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+/*# sourceMappingURL=test1_style.css.map */
