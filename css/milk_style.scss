@@ -254,8 +254,8 @@ body {
     width: 100vw;
 }
 .ball div {
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     border-radius: 100%;
     background-color: rgb(167, 226, 255);
 }
@@ -264,13 +264,13 @@ body {
 
     .ball_up_left#{$i} {
         position: absolute;
-        bottom: -15px;
+        bottom: -20px;
         left: 0;
         animation: ball_up_left 1s ($time + 2.5) + s forwards;
     }
     .ball_up_right#{$i} {
         position: absolute;
-        bottom: -15px;
+        bottom: -20px;
         right: 0;
         animation: ball_up_right 1s ($time + 2.5) + s forwards;
     }
@@ -285,7 +285,7 @@ body {
 }
 .ball_down {
     position: absolute;
-    top: -15px;
+    top: -20px;
     left: 57%;
     animation: ball_down 0.8s linear 4.9s forwards;
 }
@@ -347,7 +347,7 @@ body {
     $startX: 0; // 開始位置X
     $startY: 0; // 開始位置Y
     $ctrlX1: 0; // 制御点X1
-    $ctrlY1: 50; // 制御点Y1
+    $ctrlY1: 100; // 制御点Y1
     $ctrlX2: 220; // 制御点X2
     $ctrlY2: 0; // 制御点Y2
     $endX: 300; // 終了位置X
