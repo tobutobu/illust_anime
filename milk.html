@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>愛宮みるく</title>
+    <link rel="stylesheet" type="text/css" href="css/milk_style.css" />
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="bg_bubble"></div>
+    <div id="opening">
+        <div class="op_slide">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="op_illust">
+            <img src="img/6_1().png">
+        </div>
+        <div class="op_text">
+            <div>愛</div>
+            <div>宮</div>
+            <div>み</div>
+            <div>る</div>
+            <div>く</div>
+        </div>
+        <div class="op_bubble"></div>
+    </div>
+    <div id="home">
+        <div class="illust">
+            <div class="illust_scale">
+                <div class="illust_rote">
+                    <img src="img/6_1.png">
+                    <img src="img/6_2.png">
+                    <img src="img/6_3.png">
+                </div>
+            </div>
+        </div>
+        <div class="ball">
+            <div class="ball_down"></div>
+        </div>
+        <div class="decoration">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        <div class="dec_bg">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        // -----泡-----
+        var bubble = 60;
+
+        for (var i = 0; i <= bubble; i++) {
+            var op_moveVal = i;
+            var bg_moveVal = Math.ceil(Math.random() * 50);
+            var posVal = Math.ceil(Math.random() * 50);
+            var op_scaleVal = i;
+            var bg_scaleVal = Math.ceil(Math.random() * 10);
+            var shakeVal = Math.ceil(Math.random() * 10);
+            $(".op_bubble").append('<div class="op_bubble_move' + op_moveVal + ' bubble_pos' + posVal + '"><div class="op_bubble_scale' + op_scaleVal + '"><div class="op_bubble_Item bubble_shake' + shakeVal + '"></div></div>');
+            $(".bg_bubble").append('<div class="bg_bubble_move' + bg_moveVal + ' bubble_pos' + posVal + '"><div class="bg_bubble_scale' + bg_scaleVal + '"><div class="bg_bubble_Item bubble_shake' + shakeVal + '"></div></div>');
+        }
+
+        // ボール
+        var ball = 50;
+
+        for (var i = 0; i <= ball; i++) {
+            var moveVal = Math.ceil(Math.random() * 50);
+            var posVal = Math.ceil(Math.random() * 50);
+            $(".ball").append('<div class="ball_up_left' + moveVal + ' ball_pos_left' + posVal + '"></div>');
+            $(".ball").append('<div class="ball_up_right' + moveVal + ' ball_pos_right' + posVal + '"></div>');
+        }
+
+        // -----時間設定-----
+        var closeBox = (function (x) {
+            $(x).fadeOut(0);
+        })
+        var openBox = (function (x) {
+            $(x).fadeIn(0);
+        })
+        setTimeout('openBox("#home")', 10000);
+    </script>
+</body>
+
+</html>
